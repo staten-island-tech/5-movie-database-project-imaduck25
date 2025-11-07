@@ -3,4 +3,5 @@ import json
 movies = open("./movies.json", encoding="utf8")
 ## create variable "data" that represents the enitre movie list
 data = json.load(movies)
-print(data["title"])
+for index, item in enumerate(data):
+    print(index, ":", item["title"])
