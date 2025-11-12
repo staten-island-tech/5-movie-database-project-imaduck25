@@ -8,4 +8,6 @@ for index, item in enumerate(data):
 input("would you like to see the movies released after 1990? ")
 x = input
 if input == "yes":
-    print (item["title"]) > 1990
+    for index, item in enumerate(data):
+        if "year" <= 1990:
+            print(item["title"]) 
