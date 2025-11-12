@@ -10,9 +10,7 @@ for index, item in enumerate(data):
 def database():
     input("would you like to see the movies released after 1990? ").lower()
     print(input)
-    if input == "yes":
+    if item["year"] >= 1990:
         for index, item in enumerate(data):
-            print(item["year"]) <= 1990
-    else:
-        print("ok")
+            print(item["title"])
 database()
