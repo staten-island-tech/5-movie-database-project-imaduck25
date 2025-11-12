@@ -6,6 +6,6 @@ data = json.load(movies)
 for index, item in enumerate(data):
     print(item["title"])
 input("would you like to see the movies released after 1990? ")
+x = input
 if input == "yes":
-    for index, item in enumerate(data):
-        print(item["year"]>1990)
+    print (item["title"]) > 1990
