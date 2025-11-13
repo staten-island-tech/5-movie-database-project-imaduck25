@@ -5,12 +5,12 @@ movies = open("./movies.json", encoding="utf8")
 data = json.load(movies)
 
 for index, item in enumerate(data):
-    print(item["title"])
+    print(index, item["title"])
 
 def database():
     input("would you like to see the movies released after 1990? ").lower()
     print(input)
-    if item["year"] >= 1990:
+    if (index, item["year"]) >= 1990:
         for index, item in enumerate(data):
             print(item["title"])
 database()
