@@ -4,13 +4,24 @@ movies = open("./movies.json", encoding="utf8")
 ## create variable "data" that represents the enitre movie list
 data = json.load(movies)
 
+## File 1:
 for index, item in enumerate(data):
-    print(index, item["title"])
+    print(item["title"])
 
+""" ## File 2:
 def database():
     year = int(input("enter a year: "))
-    print("movies released after", year, ":")
+    print("movies released after", year,":")
     for item in data:
         if item["year"] > year:
+            print(item["title"])
+database()
+ """
+## File 3:
+def database():
+    year = int(input("enter a year: "))
+    print("movies released b4", year,":")
+    for item in data:
+        if item["year"] < year:
             print(item["title"])
 database()
