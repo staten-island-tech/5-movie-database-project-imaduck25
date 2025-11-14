@@ -8,7 +8,7 @@ data = json.load(movies)
 for index, item in enumerate(data):
     print(item["title"])
 
-""" ## File 2:
+## File 2 and 3:
 def database():
     year = int(input("enter a year: "))
     print("movies released after", year,":")
@@ -16,12 +16,20 @@ def database():
         if item["year"] > year:
             print(item["title"])
 database()
- """
-## File 3:
+
 def database():
     year = int(input("enter a year: "))
     print("movies released b4", year,":")
     for item in data:
         if item["year"] < year:
+            print(item["title"])
+database()
+
+## File 4:
+def database():
+    year = int(input("enter a year: "))
+    print("movies released in", year,":")
+    for item in data:
+        if item["year"] == year:
             print(item["title"])
 database()
