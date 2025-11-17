@@ -36,8 +36,5 @@ database() """
 
 ## File 5:
 def database():
-    movies = (input("search for a movie: "))
-    for item in data:
-        if item["title"] == movies:
-            print(item["title"])
+    movies == str(input("search for a movie"))
 database()
