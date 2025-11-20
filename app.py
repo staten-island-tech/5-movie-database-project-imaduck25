@@ -36,8 +36,8 @@ database() """
 
 ## File 5:
 def database():
-    movies = input("search for a movie: ")
-    if any(ch = str(movies)):
-        for movies, item in enumerate(data):
+    input("search for a movie: ")
+    if any(char for char in item["title"]) == input:
+        for data, item["title"] in enumerate(data):
             print(item["title"])
 database()
