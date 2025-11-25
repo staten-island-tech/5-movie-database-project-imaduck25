@@ -6,7 +6,7 @@ data = json.load(movies)
 
 def database():
 
-    """ ## File 1:
+    ## File 1:
     for index, item in enumerate(data):
         print(item["title"])
 
@@ -36,13 +36,13 @@ def database():
             if item["year"] == year:
                 print(item["title"])
     inyear()
- """
+
     ## File 5:
     def search():
         input("search for a movie: ")
-        if any(char for char in movies["title"]) == input:
-            for movies, movies["title"] in enumerate(data):
-                print(data["title"])
+        if any(chr in chr(input)) == (item["title"] in index):
+                for index, item in enumerate(data):
+                    print(item["title"])
     search()
     
     ## File 6:
