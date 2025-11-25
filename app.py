@@ -37,13 +37,18 @@ def database():
                 print(item["title"])
     inyear() """
 
-    ## File 5:
+    """ ## File 5:
     def search():
         m = str(input("search for a movie: "))
-        if any(chr for chr in m) == any(chr for chr in item["title"] for index, item in enumerate(data)):
-            for index, item in enumerate(data):
-                print(item["title"])
-    search()
+    search() """
     
     ## File 6:
+    def genre():
+        g = str(input("enter a genre; "))
+        print("movies in the", g, "genre")
+        for item in data:
+            if item["genres"] == g:
+                for index, item in enumerate(data):
+                    print(item["title"])
+    genre()
 database()
