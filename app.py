@@ -10,8 +10,8 @@ def database():
     for index, item in enumerate(data):
         print(item["title"])
 
-      ## File 2:
-    def after():
+    ## File 2:
+    """ def after():
         year = int(input("enter a year: "))
         print("movies released after", year,":")
         for item in data:
@@ -35,16 +35,15 @@ def database():
         for item in data:
             if item["year"] == year:
                 print(item["title"])
-    inyear()
+    inyear() """
 
     ## File 5:
     def search():
-        input("search for a movie: ")
-        if any(chr in chr(input)) == (item["title"] in index):
-                for index, item in enumerate(data):
-                    print(item["title"])
+        m = str(input("search for a movie: "))
+        if any(chr for chr in m) == any(chr for chr in item["title"] for index, item in enumerate(data)):
+            for index, item in enumerate(data):
+                print(item["title"])
     search()
     
     ## File 6:
-    
 database()
