@@ -44,11 +44,10 @@ def database():
     
     ## File 6:
     def genre():
-        g = str(input("enter a genre; "))
+        g = str(input("enter a genre: "))
         print("movies in the", g, "genre")
-        for item in data:
+        for item in movies:
             if item["genres"] == g:
-                for index, item in enumerate(data):
-                    print(item["title"])
+                print(item["title"])
     genre()
 database()
