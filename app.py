@@ -5,49 +5,57 @@ movies = open("./movies.json", encoding="utf8")
 data = json.load(movies)
 
 def database():
-
-    ## File 1:
+    ## 1
     for index, item in enumerate(data):
         print(item["title"])
-
-    ## File 2:
-    """ def after():
+    ## 2
+    def after():
         year = int(input("enter a year: "))
+        if not year.isdigit():
+            return "invalid year"
         print("movies released after", year,":")
         for item in data:
             if item["year"] > year:
                 print(item["title"])
     after()
-
-    ## File 3;
+    ## 3
     def before():
         year = int(input("enter a year: "))
+        if not year.isdigit():
+            return "invalid year"
         print("movies released b4", year,":")
         for item in data:
             if item["year"] < year:
                 print(item["title"])
     before()
-
-    ## File 4:
+    ## 4
     def inyear():
         year = int(input("enter a year: "))
+        if not year.isdigit():
+            return "invalid year"
         print("movies released in", year,":")
         for item in data:
             if item["year"] == year:
                 print(item["title"])
-    inyear() """
-
-    """ ## File 5:
+    inyear()
+    ## 5
     def search():
-        m = str(input("search for a movie: "))
-    search() """
-    
-    ## File 6:
-    def genre():
-        g = str(input("enter a genre: "))
-        print("movies in the", g, "genre")
-        for item in movies:
-            if item["genres"] == g:
+        m = input("search for a movie: ").lower().strip()
+        if not m:
+            return "invalid search"
+        print("search results for:", m)
+        for item in data:
+            if m in item["title"].lower():
                 print(item["title"])
-    genre()
+    search()
+    ## 6
+    def genre_search():
+        g = input("enter a genre: ").lower().strip()
+        if not g:
+            return "invalid genre search"
+        print("movies in genre:", g)
+        for item in data:
+          if "genre" in item and g in item["genre"].lower():
+                print(item["title"])
+    genre_search()  
 database()
