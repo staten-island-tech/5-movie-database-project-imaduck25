@@ -12,7 +12,8 @@ def database():
     def after():
         year = int(input("enter a year: "))
         if not year.isdigit():
-            return "invalid year"
+            return 
+        print()"invalid year"
         print("movies released after", year,":")
         for item in data:
             if item["year"] > year:
