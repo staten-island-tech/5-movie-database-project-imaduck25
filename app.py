@@ -10,10 +10,9 @@ def database():
         print(item["title"])
     ## 2
     def after():
-        year = int(input("enter a year: "))
+        year = (input("enter a year: "))
         if not year.isdigit():
-            return 
-        print()"invalid year"
+            return "invalid year"
         print("movies released after", year,":")
         for item in data:
             if item["year"] > year:
@@ -21,7 +20,7 @@ def database():
     after()
     ## 3
     def before():
-        year = int(input("enter a year: "))
+        year = (input("enter a year: "))
         if not year.isdigit():
             return "invalid year"
         print("movies released b4", year,":")
@@ -31,7 +30,7 @@ def database():
     before()
     ## 4
     def inyear():
-        year = int(input("enter a year: "))
+        year = (input("enter a year: "))
         if not year.isdigit():
             return "invalid year"
         print("movies released in", year,":")
